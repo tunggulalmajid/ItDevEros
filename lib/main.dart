@@ -17,24 +17,26 @@ class MyApp extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 255, 2, 2),
           title: const Center(
             child: Text(
-              'Sebuah Aplikasi',
-              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: 1.5),
+              'Healthy Heroes',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.5,
+              ),
             ),
           ),
           actions: [Icon(Icons.search, color: Colors.white, size: 30)],
           leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.white, size: 30),
-          onPressed: () {}),
+            icon: const Icon(Icons.menu, color: Colors.white, size: 30),
+            onPressed: () {},
+          ),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
+        body: SingleChildScrollView(child: Column(children: [
               
             ],
-          ),
-        )
+          )),
       ),
     );
   }
 }
-
