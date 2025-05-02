@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
               color: Colors.grey[200], // abu-abu terang
               child: Center(
                 child: Text(
-                  'Ini Halaman Home',
+                  'Ini Halaman register',
                   style: TextStyle(fontSize: 18, color: Colors.black54),
                 ),
               ),
