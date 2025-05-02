@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 200,
+            height: 270,
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 center: Alignment.center,
@@ -22,25 +22,194 @@ class HomePage extends StatelessWidget {
             ),
             child: Center(
               child: Image.asset(
-                'assets/LogoHealth.png', 
+                'assets/LogoHealth.png',
                 width: 100,
                 height: 100,
               ),
             ),
           ),
-          
+
           Expanded(
-            child: Container(
-              color: Colors.grey[200], // abu-abu terang
-              child: Center(
-                child: Text(
-                  'Ini Halaman Home',
-                  style: TextStyle(fontSize: 18, color: Colors.black54),
-                ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Container(
+                          height: 100,
+                          width: 175,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            color: Colors.red.shade400,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Menu1',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Container(
+                          height: 100,
+                          width: 175,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            color: Colors.red.shade400,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Menu2',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Container(
+                          height: 100,
+                          width: 175,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            color: const Color(0xFF69BBBC),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Menu3',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Container(
+                          height: 100,
+                          width: 175,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            color: const Color(0xFF69BBBC),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Menu4',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 15),
+                  GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Container(
+                          height: 100,
+                          width: 370,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            color: const Color(0xFF5AC57D),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Menu5',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                ],
               ),
             ),
           ),
-          
+
+          // Navbar
+          Container(
+            height: 60,
+            decoration: BoxDecoration(
+              gradient: RadialGradient(
+                center: Alignment.center,
+                radius: 0.8,
+                colors: [Color(0xFFEE3343), Color(0xFF881D26)],
+                stops: [0.1, 0.1],
+              ),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.calculate_rounded, color: Colors.white),
+                ),
+                 IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.calendar_month_rounded, color: Colors.white),
+                ), IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.home_filled, color: Colors.white),
+                ), IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.monitor_heart, color: Colors.white),
+                ), IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.receipt_rounded, color: Colors.white),
+                ),
+                
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -11,7 +11,7 @@ class LoadingPageState extends State<LoadingPage> {
     super.initState();
     // Simulasi loading lalu navigasi ke HomePage setelah 3 detik
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacementNamed('/login');
+      Navigator.of(context).pushReplacementNamed('/home');
     });
   }
 
