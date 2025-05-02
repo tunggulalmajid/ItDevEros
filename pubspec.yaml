@@ -61,6 +61,7 @@ flutter:
     - assets/BackgroundAwanLoad.png
     - assets/hhtext.png
     - assets/LogoHealth.png
+    - assets/Awan_LoadingPage.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
