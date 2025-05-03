@@ -30,8 +30,70 @@ class MenuKalkulator extends StatelessWidget {
           ),
 
           Expanded(
-            child:Center(  
-              child: Text("menu kalkulator"),
+            child:Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/kalkulatorkalori');
+                      },
+                      child: Container(
+                        height: 100,
+                        width: 375,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 1),
+                          color: Colors.red.shade400,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Kalori',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/kalkulatorkalori');
+                      },
+                      child: Container(
+                        height: 100,
+                        width: 375,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 1),
+                          color: Colors.red.shade400,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Kalori',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
 

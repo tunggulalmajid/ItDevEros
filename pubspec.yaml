@@ -64,6 +64,11 @@ flutter:
     - assets/Awan_LoadingPage.png
     - assets/HeroCowo.png
     - assets/HeroCewe.png
+    - assets/logobmi.png
+    - assets/logokalori.png
+    - assets/logomakanan.png
+    - assets/logomonitoring.png
+    - assets/logojadwalmakan.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

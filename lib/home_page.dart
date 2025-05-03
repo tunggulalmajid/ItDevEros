@@ -49,17 +49,16 @@ class HomePage extends StatelessWidget {
                           height: 100,
                           width: 175,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black, width: 1),
-                            color: Colors.red.shade400,
+                            border: Border.all(color: Colors.black, width: 2),
+                            color: const Color(0xFF73B4D6),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Text(
-                              'Kalori',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
+                            child: Image.asset(
+                              'assets/logokalori.png',
+                              fit: BoxFit.cover,
+                              width: 50,
+                              height: 50,
                             ),
                           ),
                         ),
@@ -73,17 +72,21 @@ class HomePage extends StatelessWidget {
                           height: 100,
                           width: 175,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black, width: 1),
-                            color: Colors.red.shade400,
+                            border: Border.all(color: Colors.black, width: 2),
+                            color: const Color(0xFFCEEE10),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Text(
-                              'BMI',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/logobmi.png',
+                                  fit: BoxFit.cover,
+                                  width: 60,
+                                  height: 60,
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -103,17 +106,16 @@ class HomePage extends StatelessWidget {
                           height: 100,
                           width: 175,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black, width: 1),
-                            color: const Color(0xFF69BBBC),
+                            border: Border.all(color: Colors.black, width: 2),
+                            color: const Color(0xFFFF6324),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Text(
-                              'Jadwal Makan',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
+                            child: Image.asset(
+                              'assets/logojadwalmakan.png',
+                              fit: BoxFit.cover,
+                              width: 50,
+                              height: 50,
                             ),
                           ),
                         ),
@@ -127,17 +129,16 @@ class HomePage extends StatelessWidget {
                           height: 100,
                           width: 175,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black, width: 1),
-                            color: const Color(0xFF69BBBC),
+                            border: Border.all(color: Colors.black, width: 2),
+                            color: const Color(0xFFFACE53),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Text(
-                              'Monitoring Kalori',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
+                            child: Image.asset(
+                              'assets/logomonitoring.png',
+                              fit: BoxFit.fill,
+                              width: 45,
+                              height: 60,
                             ),
                           ),
                         ),
@@ -154,14 +155,16 @@ class HomePage extends StatelessWidget {
                       height: 100,
                       width: 370,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        color: const Color(0xFF5AC57D),
+                        border: Border.all(color: Colors.black, width: 2),
+                        color: const Color(0xFFFF69E1),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
-                        child: Text(
-                          'Referensi Makanan Sehat',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        child: Image.asset(
+                          'assets/logomakanan.png',
+                          fit: BoxFit.fill,
+                          width: 75,
+                          height: 75,
                         ),
                       ),
                     ),
