@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 270,
+            height: 150,
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 center: Alignment.center,
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                           Navigator.pushNamed(context, '/kalkulatorkalori');
                         },
                         child: Container(
-                          height: 100,
+                          height: 150,
                           width: 175,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.black, width: 2),
@@ -54,22 +54,40 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Image.asset(
-                              'assets/logokalori.png',
-                              fit: BoxFit.cover,
-                              width: 50,
-                              height: 50,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/logokalori.png',
+                                  fit: BoxFit.cover,
+                                  width: 50,
+                                  height: 50,
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Hitung Kalorimu',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    // fontFamily: ,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
                       ),
+
                       SizedBox(width: 15),
+
                       GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/kalkulatorbmi');
                         },
                         child: Container(
-                          height: 100,
+                          height: 150,
                           width: 175,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.black, width: 2),
@@ -77,14 +95,25 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Row(
+                            child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
                                   'assets/logobmi.png',
                                   fit: BoxFit.cover,
                                   width: 60,
                                   height: 60,
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  'Hitung BMI',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    // fontFamily: ,
+                                  ),
                                 ),
                               ],
                             ),
@@ -103,7 +132,7 @@ class HomePage extends StatelessWidget {
                           Navigator.pushNamed(context, '/jadwalmakanan');
                         },
                         child: Container(
-                          height: 100,
+                          height: 150,
                           width: 175,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.black, width: 2),
@@ -111,22 +140,39 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Image.asset(
-                              'assets/logojadwalmakan.png',
-                              fit: BoxFit.cover,
-                              width: 50,
-                              height: 50,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/logojadwalmakan.png',
+                                  fit: BoxFit.cover,
+                                  width: 50,
+                                  height: 50,
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Jadwal Makanan',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    // fontFamily: ,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
                       ),
+
                       SizedBox(width: 15),
+
                       GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/monitoringkalori');
                         },
                         child: Container(
-                          height: 100,
+                          height: 150,
                           width: 175,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.black, width: 2),
@@ -134,12 +180,28 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Center(
-                            child: Image.asset(
-                              'assets/logomonitoring.png',
-                              fit: BoxFit.fill,
-                              width: 45,
-                              height: 60,
-                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/logomonitoring.png',
+                                  fit: BoxFit.fill,
+                                  width: 55,
+                                  height: 70,
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Monitoring Kalori',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    // fontFamily: ,
+                                  ),
+                                ),
+                              ],
+                            ), 
+                            
                           ),
                         ),
                       ),
@@ -152,7 +214,7 @@ class HomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/referensimakanan');
                     },
                     child: Container(
-                      height: 100,
+                      height: 150,
                       width: 370,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black, width: 2),
@@ -160,12 +222,28 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
-                        child: Image.asset(
-                          'assets/logomakanan.png',
-                          fit: BoxFit.fill,
-                          width: 75,
-                          height: 75,
-                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/logomakanan.png',
+                              fit: BoxFit.fill,
+                              width: 65,
+                              height: 65,
+                            ),
+                            SizedBox(height: 4),
+                            Text(
+                              'Referensi Makanan',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                // fontFamily: ,
+                              ),
+                            ),
+                          ],
+                        ), 
+                        
                       ),
                     ),
                   ),
