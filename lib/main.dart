@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'loading_page.dart';
-import 'home_page.dart';
-import 'Login_page.dart';
-import 'register_page.dart';
-import 'kalkulator_menu.dart';
-import 'kalkulator_kalori.dart';
-import 'kalkulator_bmi.dart';
-import 'monitoring_kalori.dart';
-import 'referensi_makanan.dart';
-import 'jadwal_makan.dart';
-
+import 'screen/loading_page.dart';
+import 'screen/home_page.dart';
+import 'screen/Login_page.dart';
+import 'screen/register_page.dart';
+import 'screen/kalkulator_menu.dart';
+import 'screen/kalkulator_kalori.dart';
+import 'screen/kalkulator_bmi.dart';
+import 'screen/monitoring_kalori.dart';
+import 'screen/referensi_makanan.dart';
+import 'screen/jadwal_makan.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key}); 
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,6 @@ class MyApp extends StatelessWidget {
         '/monitoringkalori': (context) => MonitoringKalori(),
         '/referensimakanan': (context) => ReferensiMakan(),
         '/jadwalmakanan': (context) => JadwalMakan(),
-        
       },
     );
   }

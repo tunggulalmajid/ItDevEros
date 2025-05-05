@@ -11,7 +11,7 @@ class LoadingPageState extends State<LoadingPage> {
     super.initState();
     // Simulasi loading lalu navigasi ke HomePage setelah 3 detik
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacementNamed('/home');
+      Navigator.pushNamed(context, '/home');
     });
   }
 
@@ -40,11 +40,7 @@ class LoadingPageState extends State<LoadingPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Image.asset(
-                    'assets/LogoHealth.png',
-                    fit: BoxFit.fill,
-                    
-                  ),
+                  Image.asset('assets/LogoHealth.png', fit: BoxFit.fill),
 
                   Image.asset(
                     'assets/hhtext.png',
