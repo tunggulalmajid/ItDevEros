@@ -1,9 +1,13 @@
+import 'package:belajarflutter1/widgets/button.dart';
 import 'package:flutter/material.dart';
 import '../widgets/navbar.dart';
 import '../widgets/bottom_navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class KalkulatorBmi extends StatelessWidget {
+  final TextEditingController tinggiBadan = TextEditingController();
+  final TextEditingController beratBadan = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +46,7 @@ class KalkulatorBmi extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.all(8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Column(
                       children: [
                         Text(
                           "Kalkulator BMI",
@@ -53,6 +56,66 @@ class KalkulatorBmi extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        SizedBox(height: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tinggi Badan : ',
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                            TextField(
+                              controller: tinggiBadan,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                              decoration: InputDecoration(
+                                hintText: 'tinggi badan (cm)',
+                                hintStyle: GoogleFonts.poppins(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                ),
+                                border: UnderlineInputBorder(),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tinggi Badan : ',
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                            TextField(
+                              controller: tinggiBadan,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                              decoration: InputDecoration(
+                                hintText: 'tinggi badan (cm)',
+                                hintStyle: GoogleFonts.poppins(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                ),
+                                border: UnderlineInputBorder(),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        GestureDetector(onTap: () {}, child: ButtonKalkulasi()),
                       ],
                     ),
                   ),
