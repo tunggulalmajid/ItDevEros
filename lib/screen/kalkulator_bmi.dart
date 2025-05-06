@@ -4,9 +4,27 @@ import '../widgets/navbar.dart';
 import '../widgets/bottom_navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class KalkulatorBmi extends StatelessWidget {
-  final TextEditingController tinggiBadan = TextEditingController();
-  final TextEditingController beratBadan = TextEditingController();
+class KalkulatorBmi extends StatefulWidget {
+  @override
+  State<KalkulatorBmi> createState() => _KalkulatorBmiState();
+}
+
+class _KalkulatorBmiState extends State<KalkulatorBmi> {
+  final TextEditingController _tinggiBadan = TextEditingController();
+  final TextEditingController _beratBadan = TextEditingController();
+  double hasilBmi = 0;
+  String textBmi = '';
+  String keteranganBmi = '';
+
+  void hitungBmi() {
+    double tinggiBadan = double.parse(_tinggiBadan.text) * 0.01;
+    double beratBadan = double.parse(_beratBadan.text);
+    setState(() {
+      hasilBmi = beratBadan / (tinggiBadan * tinggiBadan);
+
+      textBmi = hasilBmi.toStringAsFixed(2);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +36,11 @@ class KalkulatorBmi extends StatelessWidget {
       bottomNavigationBar: BottomNav(),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               margin: EdgeInsets.all(12),
               width: 500,
-              height: 400,
+              height: 450,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black, width: 1),
                 borderRadius: BorderRadius.circular(12),
@@ -69,7 +86,7 @@ class KalkulatorBmi extends StatelessWidget {
                               ),
                             ),
                             TextField(
-                              controller: tinggiBadan,
+                              controller: _tinggiBadan,
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 12,
@@ -90,7 +107,7 @@ class KalkulatorBmi extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Tinggi Badan : ',
+                              'Berat Badan : ',
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -98,13 +115,13 @@ class KalkulatorBmi extends StatelessWidget {
                               ),
                             ),
                             TextField(
-                              controller: tinggiBadan,
+                              controller: _beratBadan,
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 12,
                               ),
                               decoration: InputDecoration(
-                                hintText: 'tinggi badan (cm)',
+                                hintText: 'Berat badan (Kg)',
                                 hintStyle: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontSize: 12,
@@ -115,7 +132,45 @@ class KalkulatorBmi extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        GestureDetector(onTap: () {}, child: ButtonKalkulasi()),
+                        GestureDetector(
+                          onTap: () {
+                            hitungBmi();
+                          },
+                          child: ButtonKalkulasi(),
+                        ),
+                        SizedBox(height: 25),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Hasil Perhitungan",
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              textBmi,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "Keterangan : ",
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                       ],
                     ),
                   ),
