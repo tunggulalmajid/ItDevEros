@@ -1,6 +1,7 @@
 import 'package:belajarflutter1/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 import '../widgets/bottom_navbar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
                                 SizedBox(height: 4),
                                 Text(
                                   'Hitung Kalorimu',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
@@ -89,7 +90,7 @@ class HomePage extends StatelessWidget {
                                 SizedBox(width: 10),
                                 Text(
                                   'Hitung BMI',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
@@ -133,7 +134,7 @@ class HomePage extends StatelessWidget {
                                 SizedBox(height: 4),
                                 Text(
                                   'Jadwal Makanan',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
@@ -173,7 +174,7 @@ class HomePage extends StatelessWidget {
                                 SizedBox(height: 4),
                                 Text(
                                   'Monitoring Kalori',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
@@ -214,7 +215,7 @@ class HomePage extends StatelessWidget {
                             SizedBox(height: 4),
                             Text(
                               'Referensi Makanan',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/navbar.dart';
 import '../widgets/bottom_navbar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuKalkulator extends StatelessWidget {
   @override
@@ -46,9 +47,9 @@ class MenuKalkulator extends StatelessWidget {
                               SizedBox(height: 10),
                               Text(
                                 "Kalkulator Kalori",
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   color: Colors.black,
-                                  fontSize: 18,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -88,9 +89,9 @@ class MenuKalkulator extends StatelessWidget {
                               SizedBox(height: 10),
                               Text(
                                 "Kalkulator BMI",
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   color: Colors.black,
-                                  fontSize: 18,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

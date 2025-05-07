@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/navbar.dart';
 import '../widgets/bottom_navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../widgets/back_icon.dart';
 
 class KalkulatorBmi extends StatefulWidget {
   @override
@@ -14,14 +15,33 @@ class _KalkulatorBmiState extends State<KalkulatorBmi> {
   final TextEditingController _beratBadan = TextEditingController();
   double hasilBmi = 0;
   String textBmi = '';
-  String keteranganBmi = '';
+  String saran = '';
+  String kategori = '';
+  double batasBawah = 18.5;
+  double batasAtasNormal = 24.9;
+  double batasAtasBeratLebih = 29.9;
 
   void hitungBmi() {
     double tinggiBadan = double.parse(_tinggiBadan.text) * 0.01;
     double beratBadan = double.parse(_beratBadan.text);
     setState(() {
       hasilBmi = beratBadan / (tinggiBadan * tinggiBadan);
-
+      if (hasilBmi < batasBawah) {
+        kategori = 'Kategori : Berat Badan Kurang';
+        saran =
+            'Saran : Usahakan untuk melakukan surplus kalori untuk setiap harinya dan juga lakukan olahraga angkat beban untuk menambah masa otot';
+      } else if (hasilBmi > batasBawah && hasilBmi < batasAtasNormal) {
+        kategori = 'Kategori : Berat Badan Normal';
+        saran = 'Saran : Jaga Berat Badan Anda agar tetap ideal';
+      } else if (hasilBmi > batasAtasNormal && hasilBmi < batasAtasBeratLebih) {
+        kategori = 'Kategori : Berat Badan Berlebih';
+        saran =
+            'Saran : Berat Badan anda berlebih, jaga pola makan anda dan lakukan sedikit olahraga';
+      } else if (hasilBmi > batasAtasBeratLebih) {
+        kategori = 'Kategori : Obesitas';
+        saran =
+            'Saran : Berat Badan anda tergolong obesitas, lakukan defisit kalori serta olahraga yang cukup untuk mengurangi berat badan anda';
+      }
       textBmi = hasilBmi.toStringAsFixed(2);
     });
   }
@@ -37,6 +57,7 @@ class _KalkulatorBmiState extends State<KalkulatorBmi> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            BackButtonCustom(),
             Container(
               margin: EdgeInsets.all(12),
               width: 500,
@@ -132,19 +153,21 @@ class _KalkulatorBmiState extends State<KalkulatorBmi> {
                           ],
                         ),
                         SizedBox(height: 10),
+
+                        SizedBox(height: 10),
                         GestureDetector(
                           onTap: () {
                             hitungBmi();
                           },
                           child: ButtonKalkulasi(),
                         ),
-                        SizedBox(height: 25),
+                        SizedBox(height: 40),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "Hasil Perhitungan",
+                              "Hasil Kalkulasi",
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 20,
@@ -162,14 +185,27 @@ class _KalkulatorBmiState extends State<KalkulatorBmi> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Keterangan : ",
-                          style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                          ),
+                        SizedBox(height: 20),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              kategori,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              saran,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
